@@ -19,6 +19,6 @@
 3. After following above steps, we can successfully start testing the project.
 
 NOTE: 
-    1. Since the UI was not mentioned and due to time constraints I had from my end (due to my current job), I chose not to use a Frontend technology to develope the project.
-    2. I wanted to setup Docker but again, due to time constraints from my side, I couldn't implement it.
+1. Since the UI was not mentioned and due to time constraints I had from my end (due to my current job), I chose not to use a Frontend technology to develope the project.
+2. I wanted to setup Docker but again, due to time constraints from my side, I couldn't implement it.
 

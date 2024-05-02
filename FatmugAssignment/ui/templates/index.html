@@ -1,0 +1,101 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <script src="/index.js"></script>
+    <style src="css/style.css"></style>
+  </head>
+  <body>
+    {% if request.user.is_authenticated %}
+    <a href="{% url 'logout' %}"> Logout</a>
+    {% else %}
+    <h1>Hello {{ request.user.username }}!!!</h1>
+
+    <h1>Login</h1>
+    <form method="post" action="{% url 'login' %}">
+      {% csrf_token %}
+      <table>
+        <tr>
+          <td><label for="username">Username:</label> <br /></td>
+          <td>
+            <input type="text" id="username" name="username" required /><br />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="password">Password:</label> <br /></td>
+          <td>
+            <input type="password" id="password" name="password" required/><br />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="authorisation">Authorisation Token:</label> <br />
+          </td>
+          <td>
+            <input type="text" id="authorisation" name="authorisation" /><br />
+          </td>
+        </tr>
+      </table>
+
+      <button type="submit">Log In</button>
+    </form>
+    {% if error %} {{error}} {% endif %}
+
+    <h1>Sign Up</h1>
+    <form method="post" action="{% url 'vendor' %}">
+      {% csrf_token %}
+      <table>
+        <tr>
+          <td><label for="username">Username:</label></td>
+          <td>
+            <input type="text" id="username" name="username" required /><br />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="password">Password:</label>
+          </td>
+          <td>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+            /><br />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="name">Name:</label>
+          </td>
+          <td><input type="name" id="name" name="name" required /><br /></td>
+        </tr>
+        <tr>
+          <td>
+            <label for="contact_details">Contact Details:</label>
+          </td>
+          <td>
+            <input
+              type="contact_details"
+              id="contact_details"
+              name="contact_details"
+              required
+            /><br />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="address">Address:</label>
+          </td>
+          <td>
+            <input type="address" id="address" name="address" required /><br />
+          </td>
+        </tr>
+      </table>
+
+      <button type="submit">Sign Up</button>
+    </form>
+    {% endif %}
+  </body>
+</html>

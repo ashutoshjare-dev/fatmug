@@ -1,0 +1,12 @@
+{
+"po_number":1,
+"vendor":1,
+"order_date":"2024-05-01T12:30:45Z",
+"delivery_date":"2024-05-01T12:30:45Z",
+"items":{"shoes":"nike"},
+"quantity":1,
+"status":"completed",
+"quality_rating":4,
+"issue_date":"2024-05-01T12:30:45Z",
+"acknowledgment_date":"2024-05-01T12:30:45Z"
+}
